@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  user-select: none;
+  transition: 0.2s linear;
+}
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+.container {
+  width: 80%;
+  margin: 20px auto 0px;
+}
+.container .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  grid-gap: 15px;
+}
+.container .box-container .box {
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+.container .box-container .box .image {
+  width: 100%;
+}
+.container .box-container .box .image img {
+  width: 100%;
+}
+
+.container .box-container .box .prdName {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  padding: 0 20px 0;
+}
+.container .box-container .box .prdName {
+  font-weight: 500;
+  color: #424b50;
+}
+.container .box-container .box .amount {
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #074799;
+}
+
+.container .box-container .box .btn {
+  width: 80%;
+  margin: auto;
+}
+.container .box-container .box button{
+  width: 100%;
+  font-size: 0.8rem;
+  padding: 7px 0 7px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: #e9eaea;
+}
+.container .box-container .box button:hover {
+  background-color: #16404d;
+  color: white;
+  cursor: pointer;
+}
+
+/* cart icon */
+.cart-icon-container {
+  background-color: red;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  cursor: pointer;
+}
+.cart-icon-container .cart-icon-wrapper {
+  position: relative;
+  height: 70px;
+  width: 60px;
+}
+.cart-icon-container .cart-icon-wrapper .cart-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #16404d;
+  color: white;
+}
+.cart-icon-wrapper .cart-icon i {
+  font-size: 1.6rem;
+}
+
+.cart-icon-wrapper .item-count {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 5px 11px;
+  background-color: #16404d;
+  border-radius: 50%;
+}
+.cart-icon-wrapper .item-count .prdName {
+  color: white;
+}
+
+/* cart container box */
+.cart-container {
+  height: 100%;
+  width: 390px;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  right: -110%;
+  background-color:#f5f5f5;
+  padding: 0px 5px;
+}
+.cart-container.active {
+  right: 0;
+}
+.cart-container .cart-wrapper {
+  height: 100%;
+}
+.cart-container .cart-wrapper .cart-heading {
+  height: 70px;
+  width: 100%;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 13px;
+}
+.cart-wrapper .cart-heading .cart-close-icon {
+  padding: 5px 10px;
+  background-color: #424b50;
+  cursor: pointer;
+}
+.cart-wrapper .cart-heading .cart-close-icon i {
+  font-size: 1.8rem;
+}
+.item-count{
+  color: white;
+}
+.cart-container .cart-wrapper .load-product-box-container {
+  height: 65%;
+  width: 100%;
+  background-color: aqua;
+  margin-top: 5px;
+  overflow-y: scroll;
+}
+.load-product-box-container .cart-item-box {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px;
+  height: max-content;
+  background-color: #e9eaea;
+}
+
+.load-product-box-container .cart-item-box .details-box .cart-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.cart-item-box .details-box {
+  flex-grow: 1;
+}
+.cart-item-box .details-box .cart-price {
+  color: #16404d;
+  font-weight: 600;
+}
+.cart-item-box .details-box input {
+  width: 30px;
+  text-align: center;
+}
+.cart-item-box .img-dlt-box .dlt-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 0px;
+}
+.dlt-box p {
+  margin-left: 10px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: red;
+}
+.dlt-box i {
+  font-size: 1.2rem;
+  color: red;
+}
+.cart-item-box .multifly-box {
+  margin: auto;
+}
+.order-box {
+  display:flex;
+}
+
+.order-box .total{
+  display: flex;
+ position: absolute;
+ right: 20px;
+}
+.order-box button{
+  padding: 8px 20px;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e9eaea;
+  background-color:  #16404d;
+  cursor: pointer;
+}
+.order-box .total{
+  font-weight: 600;
+  margin-top: 5px;
+}
