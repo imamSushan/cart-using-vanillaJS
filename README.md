@@ -13,5 +13,5 @@ a e-commerce add to cart functionality using vanilla js
 - A eventListener and a function for add items
 - A eventListener and a function for remove items
 - A eventListener and a function for change quantity
-- A function to calculate the total cost
+- A function to calculate the total cost & update the badge
   
